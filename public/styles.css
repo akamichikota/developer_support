@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+#file-tree {
+    border: 1px solid #ddd;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+#file-content pre {
+    white-space: pre-wrap;
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 0;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.d-flex.align-items-center.mb-2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.d-flex.justify-content-between.align-items-center.mb-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+input.form-control {
+    height: calc(1.5em + .75rem + 2px);
+    overflow-x: auto;
+}
+
+button.btn {
+    height: calc(1.5em + .75rem + 2px);
+}
+
+.input-shorter {
+    flex: 1;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* コピーアイコンの位置調整 */
+.copy-icon-wrapper {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.copy-folder-icon, .copy-file-icon {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.copy-folder-icon:hover, .copy-file-icon:hover {
+    color: #0056b3;
+}
+
+.highlight > .jstree-anchor {
+    background-color: #d5f5e3 !important;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder viewport</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="themes/default/style.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="my-4">Folder viewport（例： C:/Users/akamichi kota/OriginalApp/reading_app/）</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="d-flex align-items-center mb-2">
+                    <input type="text" id="directory-path" class="form-control input-shorter" placeholder="ディレクトリパスを入力してください">
+                    <button class="btn btn-primary ml-2" onclick="loadDirectory()">ロード</button>
+                </div>
+                <div id="file-tree" class="mt-4"></div>
+            </div>
+            <div class="col-md-8">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <button class="btn btn-secondary" id="copy-button" data-clipboard-target="#file-content pre">コピー</button>
+                    <button class="btn btn-secondary" id="copy-structure-button">ディレクトリ構造コピー</button>
+                    <button class="btn btn-secondary" id="copy-all-button">全てコピー</button>
+                </div>
+                <div id="file-content">
+                    <pre class="border p-3"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jstree.min.js"></script>
+    <script src="clipboard.min.js"></script>
+    <script type="module">
+        import { loadDirectory } from './scripts/directory.js';
+        import './scripts/main.js';
+        window.loadDirectory = loadDirectory;
+    </script>
+</body>
+</html>
